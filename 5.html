@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <style>
+       .wrapper{
+        height:100vh;
+        width:100vw;
+       }
+        .pepe1{
+            box-shadow:0 0 40px #e83f07, inset 0 0 1px ;      
+            transform:translateY(-15rem) translateX(18rem);
+            animation: ball1 ease-in-out infinite 15s;
+        }
+        .pepe2{
+            box-shadow:0 0 40px rgb(201, 62, 201), inset 0 0 1px ;
+            transform:translateX(20rem) translateY(10rem);
+            animation: ball2 ease-in-out infinite 15s;
+       
+        }
+        .backgroundtp{
+            backdrop-filter: blur(20px);
+            background-color:rgba(249, 247, 251, 0.11);
+            border:2px solid rgba(227, 210, 227, 0.258);
+        }
+      @keyframes ball1{
+        0%{
+            transform:translateY(-15rem) translateX(18rem);
+        }
+        50%{ transform:translateY(-14rem) translateX(15rem);
+        }
+        100%{
+            transform:translateY(-15rem) translateX(18rem);
+        }
+      }
+        
+      @keyframes ball2{
+        0%{
+            transform:translateX(20rem) translateY(10rem);
+        }
+        50%{ 
+            transform:translateX(22rem) translateY(11.5rem);
+        }
+        100%{
+            transform:translateX(20rem) translateY(10rem);
+        }
+      }
+        
+      .first1:hover{
+        background-color: azure;
+        color: black;
+        transition: 0.1s;
+
+      }
+      .second2:hover{
+        background-color: azure;
+        color: black;
+        transition: 0.7s;
+      }
+       .modal{
+       background-color:rgba(12, 2, 12, 0.84);
+       border: solid 2px rgba(255, 255, 255, 0.37);
+       transform: translateX(-17.5rem) ;
+       backdrop-filter:blur(2px);
+       scale:0;
+       transition: ease-in-out 1s;
+       } 
+      
+       .head{
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-size: 33px;
+        transform: translateX(1.5rem) translateY(1rem);
+       }
+       .line{
+        height: 0.1px;
+        background-color: rgba(255, 255, 255, 0.434);
+        width:full;
+        margin-left: 25px;
+        margin-right: 25px;
+       }
+       .middle{
+        transform:translateX(1.6rem) translateY(3rem);
+        font-size: 20px;
+       }
+       .first:hover{
+        background-color:rgb(20, 98, 201) ;
+       }
+       .second:hover{
+        background-color:rgba(0, 255, 255) ;
+       }
+       .third:hover{
+        background-color: rgba(242, 20, 175, 0.888);
+       }
+       .fourth:hover{
+        background-color: rgba(14, 218, 150, 0.849);
+       }
+       .fifth:hover{
+        background-color: rgb(35, 178, 235);
+       }
+      
+     
+    </style>
+</head>
+
+<body>
+
+    <div class="wrapper bg-black flex items-center flex-row flex- justify-center ">
+        
+
+        <div class="relative  pepe1 bg-orange-500 rounded-full h-60 w-60"></div>
+        
+        <div class="relative  pepe2 bg-purple-600 rounded-full h-80 w-80"></div>
+        
+        <div class="backgroundtp  absolute h-123 w-98  rounded-2xl">
+            <div class="back  flex justify-center flex-col gap-10 items-center  h-125 w-100 rounded-2xl">
+          
+                <img src="https://th.bing.com/th/id/OIP.5cHh_NW8SMzIkaJq1UwT0QAAAA?rs=1&pid=ImgDetMain" class="h-40 w-40 rounded-full "> 
+
+                <div class="text-white text-3xl font-bold font">
+                    Rohit Choudhary
+                </div>
+                <div class="text-gray-500 font-extrabold text-2xl font-mono">Btech student</div>
+                <div class="flex flex-row gap-3 -translate-y-2.5">
+                    <button onclick="openmodal()" class="first1 cursor-pointer border-2 rounded-[4px] h-10 w-35  justify-center flex items-center text-gray-300 border-gray-300 text-[13.5px]">Share My Profile  </button> 
+                    <button  class="second2 cursor-pointer border-2 rounded-[4px] h-10 w-38 flex items-center justify-center text-gray-300 border-gray-300 text-[13.5px]">follow me</button>
+                    
+                </div>
+               
+            </div>     
+          
+        </div>   
+        
+        
+        <div class="flex flex-col">
+            <div class="modal w-140 h-63.5 rounded-2xl backdrop-blur-x ">
+                <div class="head text-white text-3xl font-bold ">Share My Profile</div>
+                <div class="line  translate-y-7 border-white"></div>
+                <div class="middle text-white font-semibold">Share this via</div>
+                <div class="flex flex-row gap-10 px-9 translate-y-20">
+                    <div class="first rounded-full h-16 w-17 border-1 border-blue-700"></div>
+                    <div class="second rounded-full h-16 w-17 border-1 border-cyan-500"></div>
+                    <div class="third rounded-full h-16 w-17 border-1 border-pink-600"></div>
+                    <div class="fourth rounded-full h-16 w-17 border-1 border-emerald-400"></div>
+                    <div class="fifth rounded-full h-16 w-17 border-1 border-cyan-600"></div>
+                </div>
+    
+    
+            </div> </div>
+     
+
+
+        <script src="script5.js"> </script>
+        
+    </div>
+
+</body>
+</html>
